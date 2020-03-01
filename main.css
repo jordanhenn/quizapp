@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://www.publicdomainpictures.net/pictures/240000/velka/background-bleu-11.jpg");
+    background-repeat: repeat;
+    background-size: 500px;
+}
+
+header {
+    text-align: center;
+}
+.flusher {
+    position: absolute;
+    left: 0px;
+    top: -10px;
+    max-height:30%;
+    max-width: 30%;
+}
+
+.question-area {
+    display: flex;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 25px solid grey;
+}
+
+.instruction-area {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    max-width: 400px;
+    background-color: darkgrey;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 25px solid grey;
+}
+
+.results-area {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    max-width: 400px;
+    background-color: darkgrey;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 25px solid grey;
+}
+
+.question {
+    width: 100%;
+    max-width: 400px;
+}
+
+.positioning {
+    position: relative;
+}
+
+.answer-area {
+    display: flex;
+    justify-content: center;
+    background-color: darkgrey;
+    padding: 25px;
+    width: 100%;
+    max-width: 400px; 
+    height: 200px;
+    border-radius: 25px;
+    border: 10px solid grey;
+}
+
+.answer-area-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: darkgrey;
+    padding: 25px;
+    width: 100%;
+    max-width: 400px; 
+    height: 200px;
+    border-radius: 25px;
+    border: 10px solid grey;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-around;
+}
+
+.scoring-question-count {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+.input-label {
+    padding: 5px;
+}
+
+.submitbutton {
+    margin-top: 10px;
+}
