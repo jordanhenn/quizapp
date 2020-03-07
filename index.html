@@ -8,38 +8,26 @@
 </head>
 <body>
     <header><h1>Guess That Scat!</h1></header>
+    <main>
     <div class=positioning>
         <div class="question-area">
-            <img class="question" src="https://blog.nationalgeographic.org/wp-content/uploads/2014/12/madewithOver-3.jpg" alt="Initial instructions and questions/images will go here"/>
+            <div class="instructions">
+                <h2>Instructions:</h2>
+                <p>The following quiz will test your ability to recognize the droppings of different animals. Click the toilet flusher above to begin.</p>
+            </div>
         </div>
-        <input type="image" src="https://i.imgur.com/gX7yNpv.png" alt="A toilet flusher. Clicking this flusher will take you to the next question." role="button" class="flusher js-flusher"/>
+        <input type="image" src="https://i.imgur.com/gX7yNpv.png" alt="A toilet flusher. Clicking this flusher will start the quiz or take you to the next question." role="button" class="flusher js-flusher"/>
     </div>
-    <div class="scoring-question-count">
-        <p class="score">Score: <span class="correct">0</span> of 5</p>
-        <p class="questionnumber">Question: <span class="questionnum">0</span> of 5</p>
+    <div class="score-question-positioning">
+        <div class="scoring-question-count">
+            <p class="score">Score: <span class="correct">0</span> of 5</p>
+            <p class="questionnumber">Question: <span class="questionNum">0</span> of 5</p>
+        </div>
     </div>
-    <div class="answer-area">
-        <form class="answers">
-                <div class="input-label">
-                    <input type="radio" id="answer1" name="answer" value="answer1">
-                    <label for="answer1">Answer 1</label>
-                </div>
-                <div class="input-label">
-                    <input type="radio" id="answer2" name="answer" value="answer2">
-                    <label for="answer2">Answer 2</label>
-                </div>
-                <div class="input-label">
-                    <input type="radio" id="answer3" name="answer" value="answer3">
-                    <label for="answer3">Answer 3</label>
-                </div>
-                <div class="input-label">
-                    <input type="radio" id="answer4" name="answer" value="answer4">
-                    <label for="answer4">Answer 4</label>
-                </div>
-                <div class="submitbutton">
-                    <input type="submit" value="Submit Answer">
-                </div>
-        </form>
-    </div>
+    <div class="choice-area"></div>
+    </main>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
