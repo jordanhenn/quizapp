@@ -7,24 +7,28 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header><h1>Guess That Scat!</h1></header>
+    <div class="header-area">
+        <header><h1>Guess That Scat!</h1></header>
+    </div>
     <main>
-    <div class=positioning>
-        <div class="question-area">
-            <div class="instructions">
-                <h2>Instructions:</h2>
-                <p>The following quiz will test your ability to recognize the droppings of different animals. Click the toilet flusher above to begin.</p>
+        <div class="question-instruction-area">
+            <div class="positioning">
+                <div class="question-area">
+                    <div class="instructions">
+                        <h2>Instructions:</h2>
+                        <p>The following quiz will test your ability to recognize the droppings of different animals. Click the toilet flusher above to begin.</p>
+                    </div>
+                </div>
+                <input type="image" src="/flusher.png" alt="A toilet flusher. Clicking this flusher will start the quiz or take you to the next question." role="button" class="flusher js-flusher"/>
             </div>
         </div>
-        <input type="image" src="https://i.imgur.com/gX7yNpv.png" alt="A toilet flusher. Clicking this flusher will start the quiz or take you to the next question." role="button" class="flusher js-flusher"/>
-    </div>
-    <div class="score-question-positioning">
-        <div class="scoring-question-count">
-            <p class="score">Score: <span class="correct">0</span> of 5</p>
-            <p class="questionnumber">Question: <span class="questionNum">0</span> of 5</p>
+        <div class="score-question-positioning">
+            <div class="scoring-question-count">
+                <p class="score">Score: <span class="correct">0</span> of 5</p>
+                <p class="questionnumber">Question: <span class="questionNum">0</span> of 5</p>
+            </div>
         </div>
-    </div>
-    <div class="choice-area"></div>
+            <div class="choice-area"></div>
     </main>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
     <script src="//code.jquery.com/jquery.min.js"></script>
