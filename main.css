@@ -13,7 +13,13 @@ body {
     background-size: 500px;
 }
 
+@font-face {
+    font-family: ohshit;
+    src: url(ohshit.TTF);
+}
+
 .header-area {
+    font-family: ohshit;
     height: 50px;
     color: rgba(75, 9, 9, 0.815);
     text-shadow: 2px 2px white;
@@ -32,6 +38,7 @@ body {
 .input-label {
     padding: 5px;
 }
+
 
 .submitbutton {
     margin-top: 10px;
