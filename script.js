@@ -1,26 +1,26 @@
 const STORE = [
     {
-        question: ["/1.jpg", "A picture of small, round droppings in dirt. They look like very old cocoa puffs."],
+        question: ["./1.jpg", "A picture of small, round droppings in dirt. They look like very old cocoa puffs."],
         choices: ["Rabbit", "Frog", "Lemur", "Bonobo"],
         correctAnswer: "Rabbit"
     },
     {
-        question: ["/2.jpg", "A picture of a wet, orange dropping contained in what appears to be a measuring cup. It almost looks like very, very wet sand. A body of water can be seen in the background of the image."],
+        question: ["./2.jpg", "A picture of a wet, orange dropping contained in what appears to be a measuring cup. It almost looks like very, very wet sand. A body of water can be seen in the background of the image."],
         choices: ["Flamingo", "Great White Shark", "Blue Whale", "Seagull"],
         correctAnswer: "Blue Whale"
     },
     {
-        question: ["/3.jpg", "Round, brown droppings. They almost look like brown grapes."],
+        question: ["./3.jpg", "Round, brown droppings. They almost look like brown grapes."],
         choices: ["Bobcat", "Deer", "Meerkat", "Racoon"],
         correctAnswer: "Deer"
     },
     {
-        question: ["/4.jpg"],
+        question: ["./4.jpg"],
         choices: ["Polar Bear", "Grizzly Bear", "Black Bear", "House Cat"],
         correctAnswer: "Black Bear"
     },
     {
-        question: ["/5.jpg", "A little semi-white, curved dropping. Almost looks like a half-burnt snake firework."],
+        question: ["./5.jpg", "A little semi-white, curved dropping. Almost looks like a half-burnt snake firework."],
         choices: ["Chicken", "Jackdaw", "Pigeon", "Wild Turkey"],
         correctAnswer: "Wild Turkey"
     }
@@ -112,7 +112,7 @@ function submitAnswer() {
 function wrongAnswer() {
     if (questionNumber < STORE.length - 1) {
         $('.question').fadeOut();
-        $('.question-area').html(`<img class="question" src="/wrong.png" alt="Wrong!"/>`);
+        $('.question-area').html(`<img class="question" src="./wrong.png" alt="Wrong!"/>`);
         $('.question').fadeIn();
         $('.answer-area').html(`
             <p>The correct answer was ${STORE[questionNumber].correctAnswer}.</p>
@@ -120,7 +120,7 @@ function wrongAnswer() {
         );
     }
     else {
-        $('.question-area').html(`<img class="question" src="/wrong.png" alt="Wrong!"/>`);
+        $('.question-area').html(`<img class="question" src="./wrong.png" alt="Wrong!"/>`);
         $('.answer-area').html(`
             <p>The correct answer was ${STORE[questionNumber].correctAnswer}</p>
             <p>Click the flusher to see your final results.</p>`
@@ -129,7 +129,7 @@ function wrongAnswer() {
 
 function rightAnswer() {
     if (questionNumber < STORE.length - 1) {
-        $('.question-area').html(`<img class="question" src="/right.png" alt="Right!"/>`);
+        $('.question-area').html(`<img class="question" src="./right.png" alt="Right!"/>`);
         $('.answer-area').html(`
             <p>Nice job! That was indeed the droppings of a ${STORE[questionNumber].correctAnswer}.</p>
             <p>Click the flusher to proceed to the next question.</p>`
@@ -137,7 +137,7 @@ function rightAnswer() {
         updateScore();
     }
     else {
-        $('.question-area').html(`<img class="question" src="/right.png" alt="Right!"/>`);
+        $('.question-area').html(`<img class="question" src="./right.png" alt="Right!"/>`);
         $('.answer-area').html(`
             <p>Nice job! That was indeed the droppings of a ${STORE[questionNumber].correctAnswer}</p>
             <p>Click the flusher to see your final results.</p>`
@@ -162,7 +162,7 @@ function finalResults() {
     if (score === 5) {
         $('.scoring-question-count').hide();
         $('.question').fadeOut
-        $('.question-area').html(`<img class="question" src="/5score.png" alt="Final Score: 5 out of 5"/>`);
+        $('.question-area').html(`<img class="question" src="./5score.png" alt="Final Score: 5 out of 5"/>`);
         $('.answer-area').html(`
             <p>You scored ${score} out of 5. A perfect score. An adequate score.</p>
             <p>Click the flusher to start a new quiz.</p>`
@@ -173,7 +173,7 @@ function finalResults() {
     }
     else if (score === 4) {
         $('.scoring-question-count').hide();
-        $('.question-area').html(`<img class="question" src="/4score.png" alt="Final Score: 4 out of 5"/>`);
+        $('.question-area').html(`<img class="question" src="./4score.png" alt="Final Score: 4 out of 5"/>`);
         $('.answer-area').html(`
             <p>You scored ${score} out of 5. At least you got more than half right.</p>
             <p>Click the flusher to start a new quiz.</p>`
@@ -184,7 +184,7 @@ function finalResults() {
     }
     else if (score === 3) {
         $('.scoring-question-count').hide();
-        $('.question-area').html(`<img class="question" src="/3score.png" alt="Final Score: 3 out of 5"/>`);
+        $('.question-area').html(`<img class="question" src="./3score.png" alt="Final Score: 3 out of 5"/>`);
         $('.answer-area').html(`
             <p>You scored ${score} out of 5. At least you got more than half right.</p>
             <p>Click the flusher to start a new quiz.</p>`
@@ -195,7 +195,7 @@ function finalResults() {
     }
     else if (score === 2) {
         $('.scoring-question-count').hide();
-        $('.question-area').html(`<img class="question" src="/2score.png" alt="Final Score: 2 out of 5"/>`);
+        $('.question-area').html(`<img class="question" src="./2score.png" alt="Final Score: 2 out of 5"/>`);
         $('.answer-area').html(`
         <p>You scored ${score} out of 5. You got less than half right. You are pathetic.</p>
         <p>Click the flusher to start a new quiz.</p>`
@@ -206,7 +206,7 @@ function finalResults() {
     }
     else if (score === 1) {
         $('.scoring-question-count').hide();
-        $('.question-area').html(`<img class="question" src="/1score.png" alt="Final Score: 1 out of 5"/>`);
+        $('.question-area').html(`<img class="question" src="./1score.png" alt="Final Score: 1 out of 5"/>`);
         $('.answer-area').html(`
         <p>You scored ${score} out of 5. You got less than half right. You are pathetic.</p>
         <p>Click the flusher to start a new quiz.</p>`
@@ -217,7 +217,7 @@ function finalResults() {
     }
     else {
         $('.scoring-question-count').hide();
-        $('.question-area').html(`<img class="question" src="/0score.png" alt="Final Score: 0 out of 5"/>`);
+        $('.question-area').html(`<img class="question" src="./0score.png" alt="Final Score: 0 out of 5"/>`);
         $('.answer-area').html(`
         <p>You scored ${score} out of 5. You are worthless and a failure.</p>
         <p>Click the flusher to start a new quiz.</p>`
